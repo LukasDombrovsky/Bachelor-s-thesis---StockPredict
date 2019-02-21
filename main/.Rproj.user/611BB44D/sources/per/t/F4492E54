@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1550081969447.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "948929121",
+    "id" : "F4492E54",
+    "lastKnownWriteTime" : 1496046160,
+    "last_content_update" : 1496046160,
+    "path" : "C:/Users/LukasDombrovsky/Downloads/IBM_partTime/pf/Bachelor2017-master-588326d7b0ae280f46453706358af7460cb66609/StockPredict/main/getPredictionsFromAzure.R",
+    "project_path" : "getPredictionsFromAzure.R",
+    "properties" : {
+        "cursorPosition" : "48,92",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

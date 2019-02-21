@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# function counts silent rows in 10 year Apple data\n\n# install used packages if required\ninstall.packages(ggplot2)\ninstall.packages(plotly)\ninstall.packages(dplyr)\n\n# read packages\nlibrary(ggplot2)\nlibrary(plotly)\nlibrary(dplyr)\n\ndataset1 = data.frame()\ndataset1 = read.csv(\"data/SignalsForClassification5YO/signalsAPPL10Y.csv\")\n\ntendency = c(1,3,7,14,30)\nsilentIndicators = c(9,8,7,6,5)\nsilentRows = data.frame()\nsilentIndicatorsInRow = data.frame()\n\n  for(rowIndex in 1:nrow(dataset1)){\n    column = -9\n    for(tendencyIndex in 1:5){\n      column = column + 10\n      count = 0\n      for(columnIndex in column:(column+8)){\n        if(\"silent\" == dataset1[rowIndex,columnIndex]){\n          count = count + 1\n        }\n      }\n      silentIndicatorsInRow[rowIndex,tendencyIndex] = count\n    }\n  }\n\ncounter = 0\nfor(silentIndicatorsIndex in 1:length(silentIndicators)){\n for(columnIndex in 1:5){\n   count = 0\n   for(rowIndex in 1:nrow(silentIndicatorsInRow)){\n     if(silentIndicatorsInRow[rowIndex,columnIndex] == silentIndicators[silentIndicatorsIndex]){\n       count = count + 1\n     }\n   }\n   counter = counter + 1\n   silentRows[counter,\"silentRows\"] = count\n   silentRows[counter,\"numberOfSilentIndicators\"] = as.character(silentIndicators[silentIndicatorsIndex])\n   silentRows[counter,\"columnIndex\"] = as.character(tendency[columnIndex])\n }\n}\n\nwrite.csv(silentRows, file = \"data/classificationTestedData/silentRows.csv\",row.names=FALSE)\n\nsilentRows %>% group_by(columnIndex) %>%\n  plot_ly(x=~columnIndex,y=~silentRows, color=~numberOfSilentIndicators, type = \"bar\") %>%\n  layout(title = \"Number of silent rows by number of silent indicators, grouped by tendency\",\n         xaxis = list(title = \"Tendency\")) %>%\n  add_annotations( text=\"NumberOfSilentIndicators\", xref=\"paper\", yref=\"paper\",\n                   x=0.90, xanchor=\"left\",\n                   y=0.9, yanchor=\"bottom\",    # Same y as legend below\n                   legendtitle=TRUE, showarrow=FALSE ) %>%\n  layout( legend=list(y=0.9, yanchor=\"top\") )\n",
+    "created" : 1495453782971.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2468421488",
+    "id" : "1DC96838",
+    "lastKnownWriteTime" : 1495453788,
+    "last_content_update" : 1495453788784,
+    "path" : "C:/Users/Patres/Desktop/LukasDombrovskyMonitorovaciaPlatformaVCloude/Zdrojove kody/StockPredict/TestingAndOptimalization/testing/silentRows.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

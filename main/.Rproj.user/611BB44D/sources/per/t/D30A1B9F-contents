@@ -1,0 +1,527 @@
+# install used packages if required
+# install.packages("RCurl")
+# install.packages("rjson")
+# install.packages("shiny")
+# install.packages("ggplot2")
+# install.packages("plotly")
+# install.packages("dplyr")
+
+# read installed packages
+library(RCurl)
+library(rjson)
+library(shiny)
+library(ggplot2)
+library(plotly)
+library(dplyr)
+
+source("readData.R")
+# source("getPredictionsFromAzure.R")
+
+silentRows = silentRows[order(as.numeric(silentRows$numberOfSilentIndicators)),]
+
+library(rjson)
+x <- toJSON(unname(split(silentRows, 1:nrow(silentRows))))
+cat(x)
+# write(x,"C:/Users/LukasDombrovsky/Downloads/New folder/pf/pages/StockPredict/data/silentRows.json")
+a = group_by(silentRows, columnIndex)
+
+
+htmlTemplate("template.html",
+
+            # visualize plotly charts
+             silentRows = 
+              silentRows %>% group_by(columnIndex) %>%
+              plot_ly(x=~columnIndex,y=~silentRows, color=~numberOfSilentIndicators, type = "bar") %>%
+              layout(title = "Number of silent rows by number of silent indicators, grouped by tendency",
+                     xaxis = list(title = "Tendency")) %>%
+              add_annotations( text="NumberOfSilentIndicators", xref="paper", yref="paper",
+                               x=0.90, xanchor="left",
+                               y=0.9, yanchor="bottom",    # Same y as legend below
+                               legendtitle=TRUE, showarrow=FALSE ) %>%
+              layout( legend=list(y=0.9, yanchor="top") ),
+            
+             bestTimePeriod = tabsetPanel(
+              tabPanel("Apple", meanAccuracyAAPL %>% group_by(Tendency) %>%
+                         plot_ly(x=~Tendency,y=~BestAccuracy, color=~NumberOfYears,  type = 'bar' ) %>%
+                         layout(title = "Best time period for classification AAPL")),
+              tabPanel("Bank of America", meanAccuracyBAC %>% group_by(Tendency) %>%
+                         plot_ly(x=~Tendency,y=~BestAccuracy, color=~NumberOfYears, type = 'bar' ) %>%
+                         layout(title = "Best time period for classification BAC")),
+              tabPanel("Intel", meanAccuracyINTC %>% group_by(Tendency) %>%
+                         plot_ly(x=~Tendency,y=~BestAccuracy, color=~NumberOfYears, type = 'bar' ) %>%
+                         layout(title = "Best time period for classification INTC") )
+
+            ),
+            
+            bestAlorithmsAndTendencies = tabsetPanel(
+              tabPanel("Apple", aAndTAAPL %>% group_by(Tendency) %>%
+                         plot_ly(x=~Tendency,y=~Accuracy, color=~Algorithm, type = 'scatter',
+                                 mode = 'markers', marker = list(size = 15)) %>%
+                         layout(title = "Best tendencies and algorithms for classification Apple")),
+              tabPanel("Bank of America", aAndTBAC %>% group_by(Tendency) %>%
+                         plot_ly(x=~Tendency,y=~Accuracy, color=~Algorithm, type = 'scatter',
+                                 mode = 'markers', marker = list(size = 15)) %>%
+                         layout(yaxis = list(range=c(0.4,0.9)),title = "Best tendencies and algorithms for classification Bank of America")
+              ),
+              tabPanel("Intel", aAndTINTC %>% group_by(Tendency) %>%
+                         plot_ly(x=~Tendency,y=~Accuracy, color=~Algorithm, type = 'scatter',
+                                 mode = 'markers', marker = list(size = 15)) %>%
+                         layout(title = "Best tendencies and algorithms for classification Intel"))
+              
+            ),
+            # show predicitons
+            predictions = tabsetPanel(
+              tabPanel("AAPL",
+                withTags(
+                  div(class="container",
+                    h3("Apple Inc. (AAPL)"),
+                      div(class="row",
+                        div(class="col-lg-6 col-md-6 text-center",
+                          div(class="service-box",
+                            p("3 day close price tendency"),
+                            p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten3Date)),
+                            p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten3Date)+3)),
+                            if(datesAndRatesForPredicitons$AAPLten3Signal == "rise"){
+                              img(src="img/buy.png")
+                            } else {
+                              img(src="img/sell.png")
+                            } ,
+                            p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$AAPLten3Accuracy*100,0),nsmall = 0),"%")),
+                              tags$div(id="circle",
+                              tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal),
+                                tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal),
+                                  tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal),
+                                    tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal),
+                                      tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal),
+                                        tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal),
+                                          tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal),
+                                            tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal),
+                                              tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal),
+                                                tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$AAPLten3Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten3Signal))
+                                              )
+                                            )
+                                          )
+                                        )
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                        )
+                      ),
+                      div(class="col-lg-6 col-md-6 text-center",
+                          div(class="service-box",
+                              p("7 day close price tendency"),
+                              p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten7Date)),
+                              p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten7Date)+7)),
+                              if(datesAndRatesForPredicitons$AAPLten7Signal == "rise"){
+                                img(src="img/buy.png")
+                              } else {
+                                img(src="img/sell.png")
+                              } ,
+                              p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$AAPLten7Accuracy*100,0),nsmall = 0),"%")),
+                              tags$div(id="circle",
+                                       tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal),
+                                                tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal),
+                                                         tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal),
+                                                                  tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal),
+                                                                           tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal),
+                                                                                    tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal),
+                                                                                             tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal),
+                                                                                                      tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal),
+                                                                                                               tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal),
+                                                                                                                        tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$AAPLten7Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten7Signal))
+                                                                                                               )
+                                                                                                      )
+                                                                                             )
+                                                                                    )
+                                                                           )
+                                                                  )
+                                                         )
+                                                )
+                                       )
+                              )
+                          )
+                      )
+                      
+                     ),
+                    div(class="row",
+                        div(class="col-lg-6 col-md-6 text-center",
+                            div(class="service-box",
+                                p("14 day close price tendency"),
+                                p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten14Date)),
+                                p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten14Date)+14)),
+                                if(datesAndRatesForPredicitons$AAPLten14Signal == "rise"){
+                                  img(src="img/buy.png")
+                                } else {
+                                  img(src="img/sell.png")
+                                } ,
+                                p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$AAPLten14Accuracy*100,0),nsmall = 0),"%")),
+                                tags$div(id="circle",
+                                         tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal),
+                                                  tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal),
+                                                           tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal),
+                                                                    tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal),
+                                                                             tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal),
+                                                                                      tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal),
+                                                                                               tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal),
+                                                                                                        tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal),
+                                                                                                                 tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal),
+                                                                                                                          tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$AAPLten14Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten14Signal))
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                )
+                            )
+                        ),
+                        div(class="col-lg-6 col-md-6 text-center",
+                            div(class="service-box",
+                                p("30 day close price tendency"),
+                                p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten30Date)),
+                                p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten30Date)+30)),
+                                if(datesAndRatesForPredicitons$AAPLten30Signal == "rise"){
+                                  img(src="img/buy.png")
+                                } else {
+                                  img(src="img/sell.png")
+                                } ,
+                                p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$AAPLten30Accuracy*100,0),nsmall = 0),"%")),
+                                tags$div(id="circle",
+                                         tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal),
+                                                  tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal),
+                                                           tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal),
+                                                                    tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal),
+                                                                             tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal),
+                                                                                      tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal),
+                                                                                               tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal),
+                                                                                                        tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal),
+                                                                                                                 tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal),
+                                                                                                                          tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$AAPLten30Accuracy*10,0)*10,datesAndRatesForPredicitons$AAPLten30Signal))
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                )
+                            )
+                        )
+                        
+                    )
+                      
+                    )
+                  )
+                ),
+              tabPanel("BAC",
+                       withTags(
+                         div(class="container",
+                             h3("Bank of America Corporation (BAC)"),
+                             div(class="row",
+                                 div(class="col-lg-6 col-md-6 text-center",
+                                     div(class="service-box",
+                                         p("3 day close price tendency"),
+                                         p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten3Date)),
+                                         p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten3Date)+3)),
+                                         if(datesAndRatesForPredicitons$BACten3Signal == "rise"){
+                                           img(src="img/buy.png")
+                                         } else {
+                                           img(src="img/sell.png")
+                                         } ,
+                                         p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$BACten3Accuracy*100,0),nsmall = 0),"%")),
+                                         tags$div(id="circle",
+                                                  tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal),
+                                                           tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal),
+                                                                    tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal),
+                                                                             tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal),
+                                                                                      tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal),
+                                                                                               tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal),
+                                                                                                        tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal),
+                                                                                                                 tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal),
+                                                                                                                          tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal),
+                                                                                                                                   tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$BACten3Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten3Signal))
+                                                                                                                          )
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                     )
+                                 ),
+                                 div(class="col-lg-6 col-md-6 text-center",
+                                     div(class="service-box",
+                                         p("7 day close price tendency"),
+                                         p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten7Date)),
+                                         p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten7Date)+7)),
+                                         if(datesAndRatesForPredicitons$BACten7Signal == "rise"){
+                                           img(src="img/buy.png")
+                                         } else {
+                                           img(src="img/sell.png")
+                                         } ,
+                                         p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$BACten7Accuracy*100,0),nsmall = 0),"%")),
+                                         tags$div(id="circle",
+                                                  tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal),
+                                                           tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal),
+                                                                    tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal),
+                                                                             tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal),
+                                                                                      tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal),
+                                                                                               tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal),
+                                                                                                        tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal),
+                                                                                                                 tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal),
+                                                                                                                          tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal),
+                                                                                                                                   tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$BACten7Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten7Signal))
+                                                                                                                          )
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                     )
+                                 )
+                                 
+                             ),
+                             div(class="row",
+                                 div(class="col-lg-6 col-md-6 text-center",
+                                     div(class="service-box",
+                                         p("14 day close price tendency"),
+                                         p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten14Date)),
+                                         p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten14Date)+14)),
+                                         if(datesAndRatesForPredicitons$BACten14Signal == "rise"){
+                                           img(src="img/buy.png")
+                                         } else {
+                                           img(src="img/sell.png")
+                                         } ,
+                                         p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$BACten14Accuracy*100,0),nsmall = 0),"%")),
+                                         tags$div(id="circle",
+                                                  tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal),
+                                                           tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal),
+                                                                    tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal),
+                                                                             tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal),
+                                                                                      tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal),
+                                                                                               tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal),
+                                                                                                        tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal),
+                                                                                                                 tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal),
+                                                                                                                          tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal),
+                                                                                                                                   tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$BACten14Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten14Signal))
+                                                                                                                          )
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                     )
+                                 ),
+                                 div(class="col-lg-6 col-md-6 text-center",
+                                     div(class="service-box",
+                                         p("30 day close price tendency"),
+                                         p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten30Date)),
+                                         p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten30Date)+30)),
+                                         if(datesAndRatesForPredicitons$BACten30Signal == "rise"){
+                                           img(src="img/buy.png")
+                                         } else {
+                                           img(src="img/sell.png")
+                                         } ,
+                                         p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$BACten30Accuracy*100,0),nsmall = 0),"%")),
+                                         tags$div(id="circle",
+                                                  tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal),
+                                                           tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal),
+                                                                    tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal),
+                                                                             tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal),
+                                                                                      tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal),
+                                                                                               tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal),
+                                                                                                        tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal),
+                                                                                                                 tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal),
+                                                                                                                          tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal),
+                                                                                                                                   tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$BACten30Accuracy*10,0)*10,datesAndRatesForPredicitons$BACten30Signal))
+                                                                                                                          )
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                     )
+                                 )
+                                 
+                             )
+                             
+                         )
+                       )
+              ),
+              tabPanel("INTC",
+                       withTags(
+                         div(class="container",
+                             h3("Intel Corporation (INTC)"),
+                             div(class="row",
+                                 div(class="col-lg-6 col-md-6 text-center",
+                                     div(class="service-box",
+                                         p("3 day close price tendency"),
+                                         p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten3Date)),
+                                         p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten3Date)+3)),
+                                         if(datesAndRatesForPredicitons$INTCten3Signal == "rise"){
+                                           img(src="img/buy.png")
+                                         } else {
+                                           img(src="img/sell.png")
+                                         } ,
+                                         p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$INTCten3Accuracy*100,0),nsmall = 0),"%")),
+                                         tags$div(id="circle",
+                                                  tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal),
+                                                           tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal),
+                                                                    tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal),
+                                                                             tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal),
+                                                                                      tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal),
+                                                                                               tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal),
+                                                                                                        tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal),
+                                                                                                                 tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal),
+                                                                                                                          tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal),
+                                                                                                                                   tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$INTCten3Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten3Signal))
+                                                                                                                          )
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                     )
+                                 ),
+                                 div(class="col-lg-6 col-md-6 text-center",
+                                     div(class="service-box",
+                                         p("7 day close price tendency"),
+                                         p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten7Date)),
+                                         p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten7Date)+7)),
+                                         if(datesAndRatesForPredicitons$INTCten7Signal == "rise"){
+                                           img(src="img/buy.png")
+                                         } else {
+                                           img(src="img/sell.png")
+                                         } ,
+                                         p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$INTCten7Accuracy*100,0),nsmall = 0),"%")),
+                                         tags$div(id="circle",
+                                                  tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal),
+                                                           tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal),
+                                                                    tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal),
+                                                                             tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal),
+                                                                                      tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal),
+                                                                                               tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal),
+                                                                                                        tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal),
+                                                                                                                 tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal),
+                                                                                                                          tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal),
+                                                                                                                                   tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$INTCten7Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten7Signal))
+                                                                                                                          )
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                     )
+                                 )
+                                 
+                             ),
+                             div(class="row",
+                                 div(class="col-lg-6 col-md-6 text-center",
+                                     div(class="service-box",
+                                         p("14 day close price tendency"),
+                                         p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten14Date)),
+                                         p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten14Date)+14)),
+                                         if(datesAndRatesForPredicitons$INTCten14Signal == "rise"){
+                                           img(src="img/buy.png")
+                                         } else {
+                                           img(src="img/sell.png")
+                                         } ,
+                                         p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$INTCten14Accuracy*100,0),nsmall = 0),"%")),
+                                         tags$div(id="circle",
+                                                  tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal),
+                                                           tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal),
+                                                                    tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal),
+                                                                             tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal),
+                                                                                      tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal),
+                                                                                               tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal),
+                                                                                                        tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal),
+                                                                                                                 tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal),
+                                                                                                                          tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal),
+                                                                                                                                   tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$INTCten14Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten14Signal))
+                                                                                                                          )
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                     )
+                                 ),
+                                 div(class="col-lg-6 col-md-6 text-center",
+                                     div(class="service-box",
+                                         p("30 day close price tendency"),
+                                         p(class="text-muted", paste0("From ",datesAndRatesForPredicitons$ten30Date)),
+                                         p(class="text-muted", paste0("To ",as.Date(datesAndRatesForPredicitons$ten30Date)+30)),
+                                         if(datesAndRatesForPredicitons$INTCten30Signal == "rise"){
+                                           img(src="img/buy.png")
+                                         } else {
+                                           img(src="img/sell.png")
+                                         } ,
+                                         p(paste0("Strength: ",format(round(datesAndRatesForPredicitons$INTCten30Accuracy*100,0),nsmall = 0),"%")),
+                                         tags$div(id="circle",
+                                                  tags$div(class=paste0("circle one",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal),
+                                                           tags$div(class=paste0("circle two",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal),
+                                                                    tags$div(class=paste0("circle three",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal),
+                                                                             tags$div(class=paste0("circle four",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal),
+                                                                                      tags$div(class=paste0("circle five",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal),
+                                                                                               tags$div(class=paste0("circle six",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal),
+                                                                                                        tags$div(class=paste0("circle seven",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal),
+                                                                                                                 tags$div(class=paste0("circle eight",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal),
+                                                                                                                          tags$div(class=paste0("circle nine",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal),
+                                                                                                                                   tags$div(class=paste0("circle ten",round(datesAndRatesForPredicitons$INTCten30Accuracy*10,0)*10,datesAndRatesForPredicitons$INTCten30Signal))
+                                                                                                                          )
+                                                                                                                 )
+                                                                                                        )
+                                                                                               )
+                                                                                      )
+                                                                             )
+                                                                    )
+                                                           )
+                                                  )
+                                         )
+                                     )
+                                 )
+                                 
+                             )
+                             
+                         )
+                       )
+              )
+              )
+            )
+
+

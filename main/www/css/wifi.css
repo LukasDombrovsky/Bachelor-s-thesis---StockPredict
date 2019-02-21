@@ -1,0 +1,2333 @@
+#circle {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.circle {
+    padding: 4px;
+    border: 11px solid transparent;
+    border-top: 11px solid #D1E1E6;
+    border-radius: 230px;
+
+    -webkit-transition: border-top-color 0s ease 0s;
+    -moz-transition: border-top-color 0s ease 0s;
+    -o-transition: border-top-color 0s ease 0s;
+    -ms-transition: border-top-color 0s ease 0s;
+    transition: border-top-color 0s ease 0s;
+    margin-top: 4px;
+}
+
+#circle:hover .circle {
+    border-top-color: #D1E1E6;
+}
+
+.one0rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two0rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three0rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four0rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five0rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six0rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven0rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+}
+
+.eight0rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+}
+
+.nine0rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+}
+
+.ten0rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+}
+
+.one0fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two0fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three0fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four0fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five0fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six0fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven0fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+}
+
+.eight0fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+}
+
+.nine0fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+}
+
+.ten0fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+}
+
+.one10rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two10rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three10rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four10rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five10rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six10rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven10rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+}
+
+.eight10rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+}
+
+.nine10rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+}
+
+.ten10rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one10fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two10fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three10fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four10fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five10fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six10fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven10fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+}
+
+.eight10fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+}
+
+.nine10fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+}
+
+.ten10fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}
+
+.one20rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two20rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three20rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four20rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five20rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six20rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven20rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+}
+
+.eight20rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+}
+
+.nine20rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #4CAD51;
+}
+
+.ten20rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one20fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two20fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three20fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four20fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five20fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six20fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven20fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+}
+
+.eight20fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+}
+
+.nine20fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #D91616;
+}
+
+.ten20fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}
+
+.one30rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two30rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three30rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four30rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five30rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six30rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven30rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+}
+
+.eight30rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #4CAD51;
+}
+
+.nine30rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #4CAD51;
+}
+
+.ten30rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one30fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two30fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three30fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four30fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five30fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six30fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven30fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+}
+
+.eight30fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #D91616;
+}
+
+.nine30fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #D91616;
+}
+
+.ten30fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}
+
+.one40rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two40rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three40rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four40rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five40rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six40rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven40rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #4CAD51;
+}
+
+.eight40rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #4CAD51;
+}
+
+.nine40rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #4CAD51;
+}
+
+.ten40rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one40fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two40fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three40fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four40fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five40fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six40fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+}
+
+.seven40fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #D91616;
+}
+
+.eight40fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #D91616;
+}
+
+.nine40fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #D91616;
+}
+
+.ten40fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}
+
+.one50rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two50rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three50rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four50rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five50rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six50rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #4CAD51;
+}
+
+.seven50rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #4CAD51;
+}
+
+.eight50rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #4CAD51;
+}
+
+.nine50rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #4CAD51;
+}
+
+.ten50rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one50fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two50fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three50fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four50fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five50fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+}
+
+.six50fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #D91616;
+}
+
+.seven50fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #D91616;
+}
+
+.eight50fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #D91616;
+}
+
+.nine50fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #D91616;
+}
+
+.ten50fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}
+
+.one60rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two60rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three60rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four60rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five60rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #4CAD51;
+}
+
+.six60rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #4CAD51;
+}
+
+.seven60rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #4CAD51;
+}
+
+.eight60rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #4CAD51;
+}
+
+.nine60rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #4CAD51;
+}
+
+.ten60rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one60fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two60fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three60fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four60fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+}
+
+.five60fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #D91616;
+}
+
+.six60fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #D91616;
+}
+
+.seven60fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #D91616;
+}
+
+.eight60fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #D91616;
+}
+
+.nine60fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #D91616;
+}
+
+.ten60fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}
+
+.one70rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two70rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three70rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four70rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+    border-top-color: #4CAD51;
+}
+
+.five70rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #4CAD51;
+}
+
+.six70rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #4CAD51;
+}
+
+.seven70rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #4CAD51;
+}
+
+.eight70rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #4CAD51;
+}
+
+.nine70rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #4CAD51;
+}
+
+.ten70rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one70fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two70fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three70fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+}
+
+.four70fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+    border-top-color: #D91616;
+}
+
+.five70fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #D91616;
+}
+
+.six70fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #D91616;
+}
+
+.seven70fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #D91616;
+}
+
+.eight70fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #D91616;
+}
+
+.nine70fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #D91616;
+}
+
+.ten70fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}
+
+.one80rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two80rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three80rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+    border-top-color: #4CAD51;
+}
+
+.four80rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+    border-top-color: #4CAD51;
+}
+
+.five80rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #4CAD51;
+}
+
+.six80rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #4CAD51;
+}
+
+.seven80rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #4CAD51;
+}
+
+.eight80rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #4CAD51;
+}
+
+.nine80rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #4CAD51;
+}
+
+.ten80rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one80fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two80fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+}
+
+.three80fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+    border-top-color: #D91616;
+}
+
+.four80fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+    border-top-color: #D91616;
+}
+
+.five80fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #D91616;
+}
+
+.six80fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #D91616;
+}
+
+.seven80fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #D91616;
+}
+
+.eight80fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #D91616;
+}
+
+.nine80fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #D91616;
+}
+
+.ten80fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}
+
+.one90rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two90rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+    border-top-color: #4CAD51;
+}
+
+.three90rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+    border-top-color: #4CAD51;
+}
+
+.four90rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+    border-top-color: #4CAD51;
+}
+
+.five90rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #4CAD51;
+}
+
+.six90rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #4CAD51;
+}
+
+.seven90rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #4CAD51;
+}
+
+.eight90rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #4CAD51;
+}
+
+.nine90rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #4CAD51;
+}
+
+.ten90rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one90fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+}
+
+.two90fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+    border-top-color: #D91616;
+}
+
+.three90fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+    border-top-color: #D91616;
+}
+
+.four90fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+    border-top-color: #D91616;
+}
+
+.five90fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #D91616;
+}
+
+.six90fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #D91616;
+}
+
+.seven90fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+}
+
+.eight90fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #D91616;
+}
+
+.nine90fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #D91616;
+}
+
+.ten90fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}
+
+.one100rise {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+    border-top-color: #4CAD51;
+}
+
+.two100rise {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+    border-top-color: #4CAD51;
+}
+
+.three100rise {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+    border-top-color: #4CAD51;
+}
+
+.four100rise {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+    border-top-color: #4CAD51;
+}
+
+.five100rise {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #4CAD51;
+}
+
+.six100rise {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #4CAD51;
+}
+
+.seven100rise {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #4CAD51;
+}
+
+.eight100rise {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #4CAD51;
+}
+
+.nine100rise {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #4CAD51;
+}
+
+.ten100rise {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #4CAD51;
+}
+
+.one100fall {
+    -webkit-transition-delay: 1600ms;
+    -moz-transition-delay: 1600ms;
+    -o-transition-delay: 1600ms;
+    -ms-transition-delay: 1600ms;
+    transition-delay: 1600ms;
+    width: 300px;
+    height: 300px;
+    border-top-color: #D91616;
+}
+
+.two100fall {
+    -webkit-transition-delay: 1450ms;
+    -moz-transition-delay: 1450ms;
+    -o-transition-delay: 1450ms;
+    -ms-transition-delay: 1450ms;
+    transition-delay: 1450ms;
+    width: 270px;
+    height: 270px;
+    border-top-color: #D91616;
+}
+
+.three100fall {
+    -webkit-transition-delay: 1300ms;
+    -moz-transition-delay: 1300ms;
+    -o-transition-delay: 1300ms;
+    -ms-transition-delay: 1300ms;
+    transition-delay: 1300ms;
+    width: 240px;
+    height: 240px;
+    border-top-color: #D91616;
+}
+
+.four100fall {
+    -webkit-transition-delay: 1050ms;
+    -moz-transition-delay: 1050ms;
+    -o-transition-delay: 1050ms;
+    -ms-transition-delay: 1050ms;
+    transition-delay: 1050ms;
+    width: 210px;
+    height: 210px;
+    border-top-color: #D91616;
+}
+
+.five100fall {
+    -webkit-transition-delay: 900ms;
+    -moz-transition-delay: 900ms;
+    -o-transition-delay: 900ms;
+    -ms-transition-delay: 900ms;
+    transition-delay: 900ms;
+    width: 180px;
+    height: 180px;
+    border-top-color: #D91616;
+}
+
+.six100fall {
+    -webkit-transition-delay: 750ms;
+    -moz-transition-delay: 750ms;
+    -o-transition-delay: 750ms;
+    -ms-transition-delay: 750ms;
+    transition-delay: 750ms;
+    width: 150px;
+    height: 150px;
+    border-top-color: #D91616;
+}
+
+.seven100fall {
+    -webkit-transition-delay: 600ms;
+    -moz-transition-delay: 600ms;
+    -o-transition-delay: 600ms;
+    -ms-transition-delay: 600ms;
+    transition-delay: 600ms;
+    width: 120px;
+    height: 120px;
+    border-top-color: #D91616;
+}
+
+.eight100fall {
+    -webkit-transition-delay: 450ms;
+    -moz-transition-delay: 450ms;
+    -o-transition-delay: 450ms;
+    -ms-transition-delay: 450ms;
+    transition-delay: 450ms;
+    width: 90px;
+    height: 90px;
+    border-top-color: #D91616;
+}
+
+.nine100fall {
+    -webkit-transition-delay: 300ms;
+    -moz-transition-delay: 300ms;
+    -o-transition-delay: 300ms;
+    -ms-transition-delay: 300ms;
+    transition-delay: 300ms;
+    width: 60px;
+    height: 60px;
+    border-top-color: #D91616;
+}
+
+.ten100fall {
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    transition-delay: 150ms;
+    width: 30px;
+    height: 30px;
+    border-top-color: #D91616;
+}

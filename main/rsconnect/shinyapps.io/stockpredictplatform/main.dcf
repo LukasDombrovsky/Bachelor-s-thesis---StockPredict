@@ -1,0 +1,10 @@
+name: main
+title: main
+account: stockpredictplatform
+server: shinyapps.io
+appId: 179227
+bundleId: 839672
+url: https://stockpredictplatform.shinyapps.io/main/
+when: 1495656961.16544
+asMultiple: FALSE
+asStatic: FALSE

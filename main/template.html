@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ headContent() }}
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>StockPredict</title>
+  
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- Wifi CSS -->             
+    <link href="css/wifi.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                  <img src="SP_logo.png">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#indicators">Indicators</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#algorithms">Algorithms</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#optimalization">optimalization</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll predictions" href="#predictions">Predictions</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">The stock market cloud monitoring platform</h1>
+                <hr>
+                <p>StockPredict can help you make better trading decisions! Just look on our forecast, no strings attached!</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <hr class="light">
+                    <p class="text-faded">StockPredict is online monitoring platform based on the complex technical analysis of the market data. The data are processed and transformed by R scripts, then technical indicators optimized for the specific stock generate movement signals. The signals are sent to and utilized by Microsoft Azure Machine Learning Studio algorithms and based on the output the predictions for a next 3, 7, 14 a 30 days are made.</p>
+                    <div class="container">
+                      <div class="row">
+                          <div class="col-lg-4 col-md-6 text-center">
+                              <div class="service-box">
+                                  <img src="r_logo.png">
+                                  <h3>R Studio</h3>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 text-center">
+                              <div class="service-box">
+                                  <img src="ml_logo.png">
+                                  <h3>Microsoft Azure Machine Learning Studio</h3>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <a href="#indicators" class="page-scroll btn btn-default btn-xl sr-button">Explore our indicators</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="indicators">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Technical indicators</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="ADL_logo.png">
+                        <h3>ADL</h3>
+                        <p class="text-muted">Accumulation/Distribution Line combines price and volume to show how money may be flowing into or out of a stock.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="TRIX_logo.png">
+                        <h3>ADX</h3>
+                        <p class="text-muted">Average Directional Index shows whether a stock is trending or oscillating.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="ROC_logo.png">
+                        <h3>AROON</h3>
+                        <p class="text-muted">Aroon oscillator measures the difference between Aroon Up and Aroon Down.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="stochRSI_logo.png">
+                        <h3>StochRSI</h3>
+                        <p class="text-muted">StochRSI combines stochastics with the Relative Strength Index indicator(RSI) to help you see RSI changes more clearly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="ROC_logo.png">
+                        <h3>SAR</h3>
+                        <p class="text-muted">Parabolic Stop and Reverse is a chart overlay that shows reversal points below prices in an uptrend and above prices in a downtrend.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="stochRSI_logo.png">
+                        <h3>Force Index</h3>
+                        <p class="text-muted">Force Index is a simple price-and-volume oscillator.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="ADL_logo.png">
+                        <h3>ROC</h3>
+                        <p class="text-muted">Rate of Change shows the speed at which a stock's price is changing.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="TRIX_logo.png">
+                        <h3>TRIX</h3>
+                        <p class="text-muted">TRIX is a triple-smoothed moving average of price movements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a href="#algorithms" class="btn btn-primary btn-xl page-scroll">Explore our classification algorithms</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-padding" id="algorithms">
+       <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Machine learning classification algorithms</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/1.png" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Two-Class Boosted Decision Tree
+                                </div>
+                                <div class="project-category text-faded">
+                                    Accurate, fast training, large memory footprint
+                                </div>
+                                <div class="project-category text-faded">
+                                    Click for more info
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/2.png" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Two-Class Averaged Perceptron
+                                </div>
+                                <div class="project-category text-faded">
+                                    Fast training, linear model
+                                </div>
+                                <div class="project-category text-faded">
+                                    Click for more info
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/3.png" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Two-Class Decision Forest
+                                </div>
+                                <div class="project-category text-faded">
+                                    Accurate, fast training
+                                </div>
+                                <div class="project-category text-faded">
+                                    Click for more info
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/4.png" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Two-Class Neural Network
+                                </div>
+                                <div class="project-category text-faded">
+                                    Accurate, long training times
+                                </div>
+                                <div class="project-category text-faded">
+                                    Click for more info
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/5.png" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Two-Class Locally-Deep Support Vector Machine
+                                </div>
+                                <div class="project-category text-faded">
+                                    Under 100 features
+                                </div>
+                                <div class="project-category text-faded">
+                                    Click for more info
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/6.png" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-name">
+                                    Two-Class Support Vector Machine
+                                </div>
+                                <div class="project-category text-faded">
+                                    Under 100 features, linear model
+                                </div>
+                                <div class="project-category text-faded">
+                                    Click for more info
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="optimalization">
+      <aside class="bg-dark">
+          <div class="container text-center">
+              <div class="call-to-action">
+                  <h2>Optimalization process</h2>
+                  <hr class="primary">
+                    <p>Every one of our nine technical indicators explore the market data and if it recognies a pattern, which is significant enough for a price to rise or fall, then indicator gives a two class signal(rise or fall). The main thing in the optimalization process was to get the most accurate signals from the indicators and at the same time have enough signals to make the predictions. The signals generated from each indicator depend on the parameters passed to the indicator. We started optimalization of the parameters on 5-years historical daily prices to ensure enough data to find optimal parameters, which are also general enough for future predictions. We found out two or one year data are simply sufficient to find parameters general enough.</p>
+                    <p>In case some indicator doesn't see any pattern in the current data it gives the signal "silent". So the next step was to be sure, we have enough signals in every row to generate some kind of signal from the machine learining. We generated the signals on ten year data with the use of the optimized parameters and expolered how many times there is low number of the signals. The next chart shows that on 10-years data there was no single day when all of our indicators gave signal silent and for example roughly one day out of one hundred less than three indicators gave us rise/fall singnal, so we can conclude we have always some singnals:</p>
+                <p>{{ silentRows }}</p>
+                <p>Next important thing was to decide on how many years of daily data apply to the optimized parameters and train classification algorithms in Microsoft Azure Machine Learning Studio. We observed accuracy of the models on 1,2,3,4,5 and 10-years data for a 3 different companies(Apple,Bank of America and Intel). We can see the results on chart down below. They are pretty straight forward - the models have the best accuracy on one-year data. The possible reason is that every one of our 9 indicators give only 3 classes of the singnals(rise/fall/silent) which can lead to overfitting and also most recent data are more appropriate for the predictions.</p>
+                <p>{{ bestTimePeriod }}</p>
+                <p>Finally we tested which prediction periods(1,3,7,14,30 days) have acceptable accuracy. As you can see on the charts below making prediction for a next day is not very accurate. Platform is making the predictions for 3 days tendency every third day and predictions for 7 days tendency every 7th day and for 14 a 30 days tendency every 14th day.  Every company uses its best accuracy classification algorithms for every prediction period. For example Bank of America uses Support Vector Machine algorithm for a 14 days tendency period with tested success rate of 87.5%.</p>
+                <p>{{ bestAlorithmsAndTendencies }}</p>
+                  <a href="#predictions" class="page-scroll btn btn-default btn-xl sr-button">Show Me Your Current Predictions Now!</a>
+              </div>
+          </div>
+      </aside>
+    </section>
+    
+    <section id="predictions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Predictions</h2>
+                    <hr class="primary">
+                    <p>Here are our live predictions! Choose the desired company on tabs and explore our predictions! Every company has forecasted tendencies for 3,7,14 and 30 days tendency. Every forecast has the dates, the prediction graphics => green BULL = rise and red BEAR = fall and strength of that forecast.</p>
+                </div>
+            </div>
+            <div class="tabbable">
+              {{ predictions }}
+            </div>
+        </div>
+    </section>
+    
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Lukas Dombrovsky | 2017</h2>
+                <hr class="primary">
+            </div>
+            <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p>090-837-7594</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:lukas.dombrovsky@gmail.com">lukas.dombrovsky@gmail.com</a></p>
+                </div>
+        </div>
+    </aside>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+</body>
+
+</html>

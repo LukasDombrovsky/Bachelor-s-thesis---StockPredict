@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "a = read.csv(\"data/backupOptimizedParameters/backupSignalsAAPL.csv\")\n\na = a[,c(\"ADX.SucessRate\",\"ADX.NumberOfSignals\",\"ADX.MainPeriod\",\"ADX.TrendBorder\",\n                \"ForceIndex.SucessRate\",\"ForceIndex.NumberOfSignals\",\"ForceIndex.PeriodFI\",\"ForceIndex.PeriodEMA\",\n                \"ROC.SucessRate\",\"ROC.NumberOfSignals\",\"ROC.PeriodROC\",\"ROC.Percentage\",\"ROC.PeriodSMA\",\"ROC.PeriodClose\",\n                \"AROON.SucessRate\",\"AROON.NumberOfSignals\",\"AROON.Period\",\"AROON.HighValue\",\"AROON.LowValue\",\n                \"StochRSI.SucessRate\",\"StochRSI.NumberOfSignals\",\"StochRSI.PeriodRSI\",\"StochRSI.HighSMA\",\"StochRSI.LowSMA\",\"StochRSI.BottomValue\",\"StochRSI.CeilingValue\",\"StochRSI.UptrendValue\",\"StochRSI.DowntrendValue\",\n                \"ADL.SucessRate\",\"ADL.NumberOfSignals\",\"ADL.PeriodADL\",\"ADL.MultiplierReversalValue\",\"ADL.MultiplierContValue\",\"ADL.VolumeRelChangeValue\",\n                \"TRIX.SucessRate\",\"TRIX.NumberOfSignals\",\"TRIX.PeriodTRIX\",\"TRIX.PeriodSignalLine\",\n                \"SAR.SucessRate\",\"SAR.NumberOfSignals\",\"SAR.StartAF\",\"SAR.IncreaseAF\",\"SAR.MaxAF\",\n                \"BBands.SucessRate\",\"BBands.NumberOfSignals\",\"BBands.Period\" )\n      ]\n      \nclass(a)\nView(a)\ncolnames(a)\n\na = data.frame(t(a))\n\ncolnames(a) = c(\"Tendency+1\",\"Tendency+3\",\"Tendency+7\",\"Tendency+14\",\"Tendency+30\")\n\n\nis.num <- sapply(a, is.numeric)\na[is.num] <- lapply(a[is.num], round, 2)\n\nwrite.csv(a,file = \"data/backupOptimizedParameters/resultSignalsAAPL.csv\")\n",
+    "created" : 1495170092570.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3369689451",
+    "id" : "9F8A8A78",
+    "lastKnownWriteTime" : 1495173824,
+    "last_content_update" : 1495173824547,
+    "path" : "C:/Users/Patres/Downloads/shiny/skriptForTable.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

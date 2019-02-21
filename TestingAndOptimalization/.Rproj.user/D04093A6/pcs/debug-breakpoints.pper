@@ -1,0 +1,21 @@
+{
+    "debugBreakpointsState" : {
+        "breakpoints" : [
+            {
+                "editor_line_number" : 21,
+                "editor_state" : 1,
+                "function_name" : "ADX",
+                "function_steps" : "13,4,2",
+                "id" : 0,
+                "is_package_breakpoint" : false,
+                "is_pending_debug_completion" : false,
+                "line_number" : 21,
+                "needs_updated_steps" : false,
+                "package_name" : "",
+                "path" : "C:/Users/Patres/Desktop/LukasDombrovskyMonitorovaciaPlatformaVCloude/Zdrojove kody/StockPredict/TestingAndOptimalization/indicators/ADX.R",
+                "state" : 1,
+                "type" : 0
+            }
+        ]
+    }
+}

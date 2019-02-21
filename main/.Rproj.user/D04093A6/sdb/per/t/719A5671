@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "install.packages('rsconnect')\n\nlibrary(rsconnect)\n\nrsconnect::setAccountInfo(name='stockpredictplatform', token='4C6CBB46C357334757B953F878B04712', secret='XyNFM34e3j8howPez1Bc4SEjqmdPY+1DbYJJ+WM7')\n\nlibrary(rsconnect)\nrsconnect::deployApp( account = \"stockpredictplatform\" )\n\ngetwd()\n\n\"C:/Users/Patres/Downloads/shiny\"\n\n\na = read.csv(\"\")",
+    "created" : 1495183763158.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2910010208",
+    "id" : "719A5671",
+    "lastKnownWriteTime" : 1495170040,
+    "last_content_update" : 1495170040,
+    "path" : "C:/Users/Patres/Downloads/shiny/deploy.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

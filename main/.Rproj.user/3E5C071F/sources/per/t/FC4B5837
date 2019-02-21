@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1524055181615.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "948929121",
+    "id" : "FC4B5837",
+    "lastKnownWriteTime" : 1496046160,
+    "last_content_update" : 1524055384978,
+    "path" : "C:/Users/LukasDombrovsky/Downloads/New folder/pf/Bachelor2017-master-588326d7b0ae280f46453706358af7460cb66609/StockPredict/main/getPredictionsFromAzure.R",
+    "project_path" : "getPredictionsFromAzure.R",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

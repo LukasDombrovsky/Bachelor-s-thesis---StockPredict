@@ -1,0 +1,7 @@
+Algorithm,Accuracy
+Two-Class Boosted Decision Tree,0.57
+Two-Class Averaged Perceptron,0.565
+Two-Class Decision Forest,0.575
+Two-Class Neural Network,0.515
+Two-Class Locally-Deep Support Vector Machine,0.54
+Two-Class Support Vector Machine,0.56

@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549451542324.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2856231677",
+    "id" : "5EABA76E",
+    "lastKnownWriteTime" : 1550081921,
+    "last_content_update" : 1550081921164,
+    "path" : "C:/Users/LukasDombrovsky/Downloads/IBM_partTime/pf/Bachelor2017-master-588326d7b0ae280f46453706358af7460cb66609/StockPredict/main/readData.R",
+    "project_path" : "readData.R",
+    "properties" : {
+        "cursorPosition" : "14,79",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1525432817255.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2605B588",
+    "lastKnownWriteTime" : 5292976843906638626,
+    "last_content_update" : 1525432817255,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "10B4B380",
+        "caption" : "silentRows",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=silentRows&cache_key=10B4B380",
+        "displayedObservations" : 25,
+        "environment" : "",
+        "object" : "silentRows",
+        "preview" : 0,
+        "totalObservations" : 25,
+        "variables" : 3
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
